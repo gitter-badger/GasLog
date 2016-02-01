@@ -1,0 +1,21 @@
+scheme "GasLoggerUITests"
+
+devices([
+  "iPhone 6",
+  "iPhone 6 Plus",
+  "iPhone 5",
+  "iPhone 4s"
+])
+
+ALL_LANGUAGES = ["da", "de-DE", "el", "en-AU", "en-CA", "en-GB", "en-US", "es-ES", "es-MX", "fi", "fr-CA", "fr-FR", "id", "it", "ja", "ko", "ms", "nl", "no", "pt-BR", "pt-PT", "ru", "sv", "th", "tr", "vi", "zh-Hans", "zh-Hant"]
+
+languages([
+  "en-US",
+  "de-DE",
+  "es-ES"
+])
+
+# The directory in which the screenshots should be stored
+output_directory './screenshots'
+
+clear_previous_screenshots true

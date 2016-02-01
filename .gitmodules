@@ -1,0 +1,3 @@
+[submodule "GasLogger/3rdParty/FMDB"]
+	path = GasLogger/3rdParty/FMDB
+	url = git@github.com:ccgus/fmdb.git

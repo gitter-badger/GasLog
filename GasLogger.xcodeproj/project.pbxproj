@@ -1,0 +1,929 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5406EFA27C2951F199C4A74C /* Pods_GasLoggerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB52B1F50AD45D31E860EE7 /* Pods_GasLoggerUITests.framework */; };
+		7E06BE561BBB7F9600126776 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E06BE551BBB7F9600126776 /* AppDelegate.swift */; };
+		7E06BE5D1BBB7F9600126776 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E06BE5B1BBB7F9600126776 /* Main.storyboard */; };
+		7E06BE5F1BBB7F9600126776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E06BE5E1BBB7F9600126776 /* Assets.xcassets */; };
+		7E06BE621BBB7F9600126776 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E06BE601BBB7F9600126776 /* LaunchScreen.storyboard */; };
+		7E06BE6D1BBB7F9600126776 /* GasLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E06BE6C1BBB7F9600126776 /* GasLoggerTests.swift */; };
+		7E06BE781BBB7F9600126776 /* GasLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E06BE771BBB7F9600126776 /* GasLoggerUITests.swift */; };
+		7E06BE8B1BBB859400126776 /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E06BE861BBB859400126776 /* CONSTANTS.swift */; };
+		7E11D1041C408B6F001BDE13 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E11D1031C408B6F001BDE13 /* LocationManager.swift */; };
+		7E34FB531C3D9A8600043E3C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34FB521C3D9A8600043E3C /* BaseViewController.swift */; };
+		7E34FB551C3DA20300043E3C /* EntriesNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34FB541C3DA20300043E3C /* EntriesNavViewController.swift */; };
+		7E34FB571C3DA58300043E3C /* StatsNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34FB561C3DA58300043E3C /* StatsNavViewController.swift */; };
+		7E34FB591C3DA59800043E3C /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34FB581C3DA59800043E3C /* StatsViewController.swift */; };
+		7E56F0131C407C3700B58B5A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E56F0121C407C3700B58B5A /* SettingsTableViewController.swift */; };
+		7E56F0161C407C5D00B58B5A /* SettingsNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E56F0151C407C5D00B58B5A /* SettingsNavViewController.swift */; };
+		7E56F0181C407D3C00B58B5A /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E56F0171C407D3C00B58B5A /* BaseTableViewController.swift */; };
+		7E597FE01C38FB9000862BB5 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E597FD51C38FB9000862BB5 /* FMDatabase.m */; };
+		7E597FE11C38FB9000862BB5 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E597FD71C38FB9000862BB5 /* FMDatabaseAdditions.m */; };
+		7E597FE21C38FB9000862BB5 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E597FD91C38FB9000862BB5 /* FMDatabasePool.m */; };
+		7E597FE31C38FB9000862BB5 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E597FDB1C38FB9000862BB5 /* FMDatabaseQueue.m */; };
+		7E597FE41C38FB9000862BB5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E597FDE1C38FB9000862BB5 /* FMResultSet.m */; };
+		7E597FE51C38FB9000862BB5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E597FDF1C38FB9000862BB5 /* Info.plist */; };
+		7E597FE71C39892A00862BB5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E597FE61C39892A00862BB5 /* libz.tbd */; };
+		7E597FE91C39893300862BB5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E597FE81C39893300862BB5 /* libsqlite3.tbd */; };
+		7E955EA21C5EF0F500181DBE /* VehicleManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E955EA11C5EF0F500181DBE /* VehicleManagerViewController.swift */; };
+		7E955EA41C5FD79200181DBE /* AddVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E955EA31C5FD79200181DBE /* AddVehicleViewController.swift */; };
+		7E9CA9841C398BAF00E6426C /* DBMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9CA9831C398BAF00E6426C /* DBMigrator.swift */; };
+		7E9CA9861C398BBE00E6426C /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9CA9851C398BBE00E6426C /* RealmManager.swift */; };
+		7E9CA9881C398BED00E6426C /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9CA9871C398BED00E6426C /* Vehicle.swift */; };
+		7E9CA98A1C398C0900E6426C /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9CA9891C398C0900E6426C /* Entry.swift */; };
+		7E9CA98C1C3A097C00E6426C /* EntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9CA98B1C3A097C00E6426C /* EntriesViewController.swift */; };
+		7EA1D9C61C3A4025004A4F12 /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1D9C51C3A4025004A4F12 /* StyleKit.swift */; };
+		7EA1D9C81C3A418E004A4F12 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA1D9C71C3A418E004A4F12 /* CoreLocation.framework */; };
+		7EA1D9CA1C3A41DD004A4F12 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA1D9C91C3A41DD004A4F12 /* MapKit.framework */; };
+		7EA1D9CC1C3AF7DB004A4F12 /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1D9CB1C3AF7DB004A4F12 /* EntryTableViewCell.swift */; };
+		7EB069DF1C436F0F00A349ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB069DE1C436F0F00A349ED /* Images.xcassets */; };
+		7EB069E11C43746300A349ED /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB069E01C43746300A349ED /* Stats.swift */; };
+		9BE1B48A2E75755A8EB0DAF4 /* Pods_Gas_Log.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD42A6D77394F1393D850EB /* Pods_Gas_Log.framework */; };
+		D44A72179AE2019463CDA261 /* Pods_GasLoggerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5BBE9C2275DC47D4192411 /* Pods_GasLoggerTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E06BE691BBB7F9600126776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E06BE4A1BBB7F9600126776 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E06BE511BBB7F9600126776;
+			remoteInfo = GasLogger;
+		};
+		7E06BE741BBB7F9600126776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E06BE4A1BBB7F9600126776 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E06BE511BBB7F9600126776;
+			remoteInfo = GasLogger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1395EF0C35AAF2A1E1E654E2 /* Pods-GasLoggerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasLoggerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GasLoggerUITests/Pods-GasLoggerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2A5BBE9C2275DC47D4192411 /* Pods_GasLoggerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GasLoggerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AB52B1F50AD45D31E860EE7 /* Pods_GasLoggerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GasLoggerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BB3A873D9DA19512F62B6E8 /* Pods-GasLoggerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasLoggerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GasLoggerUITests/Pods-GasLoggerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6B0EE22F8E03FCDBCADAA853 /* Pods-GasLoggerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasLoggerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GasLoggerTests/Pods-GasLoggerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E06BE521BBB7F9600126776 /* Gas Log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gas Log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E06BE551BBB7F9600126776 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7E06BE5C1BBB7F9600126776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7E06BE5E1BBB7F9600126776 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E06BE611BBB7F9600126776 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7E06BE631BBB7F9600126776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E06BE681BBB7F9600126776 /* GasLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E06BE6C1BBB7F9600126776 /* GasLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasLoggerTests.swift; sourceTree = "<group>"; };
+		7E06BE6E1BBB7F9600126776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E06BE731BBB7F9600126776 /* GasLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E06BE771BBB7F9600126776 /* GasLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasLoggerUITests.swift; sourceTree = "<group>"; };
+		7E06BE791BBB7F9600126776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E06BE861BBB859400126776 /* CONSTANTS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
+		7E06BE921BBB87FD00126776 /* GasLogger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GasLogger-Bridging-Header.h"; sourceTree = "<group>"; };
+		7E11D1031C408B6F001BDE13 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Classes/LocationManager.swift; sourceTree = "<group>"; };
+		7E34FB521C3D9A8600043E3C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Controllers/BaseViewController.swift; sourceTree = "<group>"; };
+		7E34FB541C3DA20300043E3C /* EntriesNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntriesNavViewController.swift; path = Controllers/EntriesNavViewController.swift; sourceTree = "<group>"; };
+		7E34FB561C3DA58300043E3C /* StatsNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatsNavViewController.swift; path = Controllers/StatsNavViewController.swift; sourceTree = "<group>"; };
+		7E34FB581C3DA59800043E3C /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatsViewController.swift; path = Controllers/StatsViewController.swift; sourceTree = "<group>"; };
+		7E56F0121C407C3700B58B5A /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = Controllers/SettingsTableViewController.swift; sourceTree = "<group>"; };
+		7E56F0151C407C5D00B58B5A /* SettingsNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsNavViewController.swift; path = Controllers/SettingsNavViewController.swift; sourceTree = "<group>"; };
+		7E56F0171C407D3C00B58B5A /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewController.swift; path = Controllers/BaseTableViewController.swift; sourceTree = "<group>"; };
+		7E597FA61C38EC5A00862BB5 /* gaslogger.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = gaslogger.sqlite; path = Misc/gaslogger.sqlite; sourceTree = "<group>"; };
+		7E597FA81C38FA4300862BB5 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7E597FD41C38FB9000862BB5 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = GasLogger/3rdParty/FMDB/src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		7E597FD51C38FB9000862BB5 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = GasLogger/3rdParty/FMDB/src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		7E597FD61C38FB9000862BB5 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = GasLogger/3rdParty/FMDB/src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		7E597FD71C38FB9000862BB5 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = GasLogger/3rdParty/FMDB/src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		7E597FD81C38FB9000862BB5 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = GasLogger/3rdParty/FMDB/src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		7E597FD91C38FB9000862BB5 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = GasLogger/3rdParty/FMDB/src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		7E597FDA1C38FB9000862BB5 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = GasLogger/3rdParty/FMDB/src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		7E597FDB1C38FB9000862BB5 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = GasLogger/3rdParty/FMDB/src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		7E597FDC1C38FB9000862BB5 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = GasLogger/3rdParty/FMDB/src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		7E597FDD1C38FB9000862BB5 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = GasLogger/3rdParty/FMDB/src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		7E597FDE1C38FB9000862BB5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = GasLogger/3rdParty/FMDB/src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		7E597FDF1C38FB9000862BB5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GasLogger/3rdParty/FMDB/src/fmdb/Info.plist; sourceTree = "<group>"; };
+		7E597FE61C39892A00862BB5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7E597FE81C39893300862BB5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		7E955EA11C5EF0F500181DBE /* VehicleManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehicleManagerViewController.swift; path = Controllers/VehicleManagerViewController.swift; sourceTree = "<group>"; };
+		7E955EA31C5FD79200181DBE /* AddVehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddVehicleViewController.swift; path = Controllers/AddVehicleViewController.swift; sourceTree = "<group>"; };
+		7E9CA9831C398BAF00E6426C /* DBMigrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBMigrator.swift; path = Classes/DBMigrator.swift; sourceTree = "<group>"; };
+		7E9CA9851C398BBE00E6426C /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmManager.swift; path = Classes/RealmManager.swift; sourceTree = "<group>"; };
+		7E9CA9871C398BED00E6426C /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vehicle.swift; path = Models/Vehicle.swift; sourceTree = "<group>"; };
+		7E9CA9891C398C0900E6426C /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = Models/Entry.swift; sourceTree = "<group>"; };
+		7E9CA98B1C3A097C00E6426C /* EntriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntriesViewController.swift; path = Controllers/EntriesViewController.swift; sourceTree = "<group>"; };
+		7EA1D9C51C3A4025004A4F12 /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
+		7EA1D9C71C3A418E004A4F12 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7EA1D9C91C3A41DD004A4F12 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7EA1D9CB1C3AF7DB004A4F12 /* EntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryTableViewCell.swift; path = Controllers/EntryTableViewCell.swift; sourceTree = "<group>"; };
+		7EB069DE1C436F0F00A349ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Images/Images.xcassets; sourceTree = "<group>"; };
+		7EB069E01C43746300A349ED /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stats.swift; path = Classes/Stats.swift; sourceTree = "<group>"; };
+		8419128D48461BDB85B96349 /* Pods-Gas Log.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gas Log.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gas Log/Pods-Gas Log.debug.xcconfig"; sourceTree = "<group>"; };
+		AAD42A6D77394F1393D850EB /* Pods_Gas_Log.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gas_Log.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0A70D709BCE12CEF07D32C7 /* Pods-Gas Log.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gas Log.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gas Log/Pods-Gas Log.release.xcconfig"; sourceTree = "<group>"; };
+		FBE6D12CAF7CBE9907436BCE /* Pods-GasLoggerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasLoggerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GasLoggerTests/Pods-GasLoggerTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E06BE4F1BBB7F9600126776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EA1D9CA1C3A41DD004A4F12 /* MapKit.framework in Frameworks */,
+				7EA1D9C81C3A418E004A4F12 /* CoreLocation.framework in Frameworks */,
+				7E597FE91C39893300862BB5 /* libsqlite3.tbd in Frameworks */,
+				7E597FE71C39892A00862BB5 /* libz.tbd in Frameworks */,
+				9BE1B48A2E75755A8EB0DAF4 /* Pods_Gas_Log.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E06BE651BBB7F9600126776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D44A72179AE2019463CDA261 /* Pods_GasLoggerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E06BE701BBB7F9600126776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5406EFA27C2951F199C4A74C /* Pods_GasLoggerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67357A8E9FD84223B4F889D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EA1D9C91C3A41DD004A4F12 /* MapKit.framework */,
+				7EA1D9C71C3A418E004A4F12 /* CoreLocation.framework */,
+				7E597FE81C39893300862BB5 /* libsqlite3.tbd */,
+				7E597FE61C39892A00862BB5 /* libz.tbd */,
+				AAD42A6D77394F1393D850EB /* Pods_Gas_Log.framework */,
+				2A5BBE9C2275DC47D4192411 /* Pods_GasLoggerTests.framework */,
+				3AB52B1F50AD45D31E860EE7 /* Pods_GasLoggerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E06BE491BBB7F9600126776 = {
+			isa = PBXGroup;
+			children = (
+				7E06BE541BBB7F9600126776 /* GasLogger */,
+				7E597FA91C38FA8100862BB5 /* 3rdParty */,
+				7E06BE6B1BBB7F9600126776 /* GasLoggerTests */,
+				7E06BE761BBB7F9600126776 /* GasLoggerUITests */,
+				7E06BE531BBB7F9600126776 /* Products */,
+				FA8A4E7FFCA256BD218C159F /* Pods */,
+				67357A8E9FD84223B4F889D5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7E06BE531BBB7F9600126776 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E06BE521BBB7F9600126776 /* Gas Log.app */,
+				7E06BE681BBB7F9600126776 /* GasLoggerTests.xctest */,
+				7E06BE731BBB7F9600126776 /* GasLoggerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E06BE541BBB7F9600126776 /* GasLogger */ = {
+			isa = PBXGroup;
+			children = (
+				7E06BE551BBB7F9600126776 /* AppDelegate.swift */,
+				7E06BE861BBB859400126776 /* CONSTANTS.swift */,
+				7EA1D9C51C3A4025004A4F12 /* StyleKit.swift */,
+				7E06BE921BBB87FD00126776 /* GasLogger-Bridging-Header.h */,
+				7E597FA81C38FA4300862BB5 /* Podfile */,
+				7E06BE8E1BBB85F200126776 /* Views */,
+				7E06BE901BBB861B00126776 /* Controllers */,
+				7E06BE961BBB8B8D00126776 /* Classes */,
+				7E06BE911BBB861F00126776 /* Models */,
+				7E06BE8F1BBB860800126776 /* Helpers */,
+				7E06BE5E1BBB7F9600126776 /* Assets.xcassets */,
+				7E06BE631BBB7F9600126776 /* Info.plist */,
+				7E597FA51C38EC4800862BB5 /* OLD */,
+				7EB069DC1C436EE900A349ED /* Images */,
+			);
+			path = GasLogger;
+			sourceTree = "<group>";
+		};
+		7E06BE6B1BBB7F9600126776 /* GasLoggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E06BE6C1BBB7F9600126776 /* GasLoggerTests.swift */,
+				7E06BE6E1BBB7F9600126776 /* Info.plist */,
+			);
+			path = GasLoggerTests;
+			sourceTree = "<group>";
+		};
+		7E06BE761BBB7F9600126776 /* GasLoggerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7E06BE771BBB7F9600126776 /* GasLoggerUITests.swift */,
+				7E06BE791BBB7F9600126776 /* Info.plist */,
+			);
+			path = GasLoggerUITests;
+			sourceTree = "<group>";
+		};
+		7E06BE8E1BBB85F200126776 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E06BE5B1BBB7F9600126776 /* Main.storyboard */,
+				7E06BE601BBB7F9600126776 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7E06BE8F1BBB860800126776 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		7E06BE901BBB861B00126776 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E34FB521C3D9A8600043E3C /* BaseViewController.swift */,
+				7E56F0171C407D3C00B58B5A /* BaseTableViewController.swift */,
+				7E56F0111C407C1F00B58B5A /* Entries */,
+				7E56F0101C407C1A00B58B5A /* Stats */,
+				7E56F0141C407C3B00B58B5A /* Settings */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7E06BE911BBB861F00126776 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E9CA9871C398BED00E6426C /* Vehicle.swift */,
+				7E9CA9891C398C0900E6426C /* Entry.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7E06BE961BBB8B8D00126776 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7E9CA9851C398BBE00E6426C /* RealmManager.swift */,
+				7E11D1031C408B6F001BDE13 /* LocationManager.swift */,
+				7E9CA9831C398BAF00E6426C /* DBMigrator.swift */,
+				7EB069E01C43746300A349ED /* Stats.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		7E56F0101C407C1A00B58B5A /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				7E34FB561C3DA58300043E3C /* StatsNavViewController.swift */,
+				7E34FB581C3DA59800043E3C /* StatsViewController.swift */,
+			);
+			name = Stats;
+			sourceTree = "<group>";
+		};
+		7E56F0111C407C1F00B58B5A /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				7E34FB541C3DA20300043E3C /* EntriesNavViewController.swift */,
+				7EA1D9CB1C3AF7DB004A4F12 /* EntryTableViewCell.swift */,
+				7E9CA98B1C3A097C00E6426C /* EntriesViewController.swift */,
+				7E955EA11C5EF0F500181DBE /* VehicleManagerViewController.swift */,
+				7E955EA31C5FD79200181DBE /* AddVehicleViewController.swift */,
+			);
+			name = Entries;
+			sourceTree = "<group>";
+		};
+		7E56F0141C407C3B00B58B5A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7E56F0151C407C5D00B58B5A /* SettingsNavViewController.swift */,
+				7E56F0121C407C3700B58B5A /* SettingsTableViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		7E597FA51C38EC4800862BB5 /* OLD */ = {
+			isa = PBXGroup;
+			children = (
+				7E597FA61C38EC5A00862BB5 /* gaslogger.sqlite */,
+			);
+			name = OLD;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		7E597FA91C38FA8100862BB5 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				7E597FAA1C38FA8B00862BB5 /* FMDB */,
+			);
+			name = 3rdParty;
+			sourceTree = "<group>";
+		};
+		7E597FAA1C38FA8B00862BB5 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				7E597FD41C38FB9000862BB5 /* FMDatabase.h */,
+				7E597FD51C38FB9000862BB5 /* FMDatabase.m */,
+				7E597FD61C38FB9000862BB5 /* FMDatabaseAdditions.h */,
+				7E597FD71C38FB9000862BB5 /* FMDatabaseAdditions.m */,
+				7E597FD81C38FB9000862BB5 /* FMDatabasePool.h */,
+				7E597FD91C38FB9000862BB5 /* FMDatabasePool.m */,
+				7E597FDA1C38FB9000862BB5 /* FMDatabaseQueue.h */,
+				7E597FDB1C38FB9000862BB5 /* FMDatabaseQueue.m */,
+				7E597FDC1C38FB9000862BB5 /* FMDB.h */,
+				7E597FDD1C38FB9000862BB5 /* FMResultSet.h */,
+				7E597FDE1C38FB9000862BB5 /* FMResultSet.m */,
+				7E597FDF1C38FB9000862BB5 /* Info.plist */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		7EB069DC1C436EE900A349ED /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7EB069DE1C436F0F00A349ED /* Images.xcassets */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		FA8A4E7FFCA256BD218C159F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8419128D48461BDB85B96349 /* Pods-Gas Log.debug.xcconfig */,
+				F0A70D709BCE12CEF07D32C7 /* Pods-Gas Log.release.xcconfig */,
+				6B0EE22F8E03FCDBCADAA853 /* Pods-GasLoggerTests.debug.xcconfig */,
+				FBE6D12CAF7CBE9907436BCE /* Pods-GasLoggerTests.release.xcconfig */,
+				1395EF0C35AAF2A1E1E654E2 /* Pods-GasLoggerUITests.debug.xcconfig */,
+				5BB3A873D9DA19512F62B6E8 /* Pods-GasLoggerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E06BE511BBB7F9600126776 /* Gas Log */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E06BE7C1BBB7F9600126776 /* Build configuration list for PBXNativeTarget "Gas Log" */;
+			buildPhases = (
+				18640FD349961A5A2A8A263D /* Check Pods Manifest.lock */,
+				7E06BE4E1BBB7F9600126776 /* Sources */,
+				7E06BE4F1BBB7F9600126776 /* Frameworks */,
+				7E06BE501BBB7F9600126776 /* Resources */,
+				96ADC9CEA03EAEF5C5B5BCCE /* Embed Pods Frameworks */,
+				84D48E081653E8E5EE2FA0D3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gas Log";
+			productName = GasLogger;
+			productReference = 7E06BE521BBB7F9600126776 /* Gas Log.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7E06BE671BBB7F9600126776 /* GasLoggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E06BE7F1BBB7F9600126776 /* Build configuration list for PBXNativeTarget "GasLoggerTests" */;
+			buildPhases = (
+				00D46B4E21A06E17CE376777 /* Check Pods Manifest.lock */,
+				7E06BE641BBB7F9600126776 /* Sources */,
+				7E06BE651BBB7F9600126776 /* Frameworks */,
+				7E06BE661BBB7F9600126776 /* Resources */,
+				B9C6A56478B95A690A33898E /* Embed Pods Frameworks */,
+				83A45E48D3628EC231E8EE3F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E06BE6A1BBB7F9600126776 /* PBXTargetDependency */,
+			);
+			name = GasLoggerTests;
+			productName = GasLoggerTests;
+			productReference = 7E06BE681BBB7F9600126776 /* GasLoggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7E06BE721BBB7F9600126776 /* GasLoggerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E06BE821BBB7F9600126776 /* Build configuration list for PBXNativeTarget "GasLoggerUITests" */;
+			buildPhases = (
+				F7EE671FFFD1458C5F9DDFF3 /* Check Pods Manifest.lock */,
+				7E06BE6F1BBB7F9600126776 /* Sources */,
+				7E06BE701BBB7F9600126776 /* Frameworks */,
+				7E06BE711BBB7F9600126776 /* Resources */,
+				64BD1F74B1D1D56A918C4562 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E06BE751BBB7F9600126776 /* PBXTargetDependency */,
+			);
+			name = GasLoggerUITests;
+			productName = GasLoggerUITests;
+			productReference = 7E06BE731BBB7F9600126776 /* GasLoggerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E06BE4A1BBB7F9600126776 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Dagger Dev";
+				TargetAttributes = {
+					7E06BE511BBB7F9600126776 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					7E06BE671BBB7F9600126776 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = L8ML3AZ9FQ;
+						TestTargetID = 7E06BE511BBB7F9600126776;
+					};
+					7E06BE721BBB7F9600126776 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = L8ML3AZ9FQ;
+						TestTargetID = 7E06BE511BBB7F9600126776;
+					};
+				};
+			};
+			buildConfigurationList = 7E06BE4D1BBB7F9600126776 /* Build configuration list for PBXProject "GasLogger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7E06BE491BBB7F9600126776;
+			productRefGroup = 7E06BE531BBB7F9600126776 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E06BE511BBB7F9600126776 /* Gas Log */,
+				7E06BE671BBB7F9600126776 /* GasLoggerTests */,
+				7E06BE721BBB7F9600126776 /* GasLoggerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E06BE501BBB7F9600126776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E06BE621BBB7F9600126776 /* LaunchScreen.storyboard in Resources */,
+				7E06BE5F1BBB7F9600126776 /* Assets.xcassets in Resources */,
+				7EB069DF1C436F0F00A349ED /* Images.xcassets in Resources */,
+				7E06BE5D1BBB7F9600126776 /* Main.storyboard in Resources */,
+				7E597FE51C38FB9000862BB5 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E06BE661BBB7F9600126776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E06BE711BBB7F9600126776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00D46B4E21A06E17CE376777 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		18640FD349961A5A2A8A263D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		64BD1F74B1D1D56A918C4562 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasLoggerUITests/Pods-GasLoggerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83A45E48D3628EC231E8EE3F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasLoggerTests/Pods-GasLoggerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84D48E081653E8E5EE2FA0D3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gas Log/Pods-Gas Log-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96ADC9CEA03EAEF5C5B5BCCE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gas Log/Pods-Gas Log-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9C6A56478B95A690A33898E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasLoggerTests/Pods-GasLoggerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7EE671FFFD1458C5F9DDFF3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E06BE4E1BBB7F9600126776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EA1D9C61C3A4025004A4F12 /* StyleKit.swift in Sources */,
+				7E955EA41C5FD79200181DBE /* AddVehicleViewController.swift in Sources */,
+				7E9CA98A1C398C0900E6426C /* Entry.swift in Sources */,
+				7E56F0161C407C5D00B58B5A /* SettingsNavViewController.swift in Sources */,
+				7E06BE8B1BBB859400126776 /* CONSTANTS.swift in Sources */,
+				7E597FE21C38FB9000862BB5 /* FMDatabasePool.m in Sources */,
+				7E34FB571C3DA58300043E3C /* StatsNavViewController.swift in Sources */,
+				7E06BE561BBB7F9600126776 /* AppDelegate.swift in Sources */,
+				7E11D1041C408B6F001BDE13 /* LocationManager.swift in Sources */,
+				7E34FB551C3DA20300043E3C /* EntriesNavViewController.swift in Sources */,
+				7E34FB591C3DA59800043E3C /* StatsViewController.swift in Sources */,
+				7E9CA9841C398BAF00E6426C /* DBMigrator.swift in Sources */,
+				7EA1D9CC1C3AF7DB004A4F12 /* EntryTableViewCell.swift in Sources */,
+				7E597FE31C38FB9000862BB5 /* FMDatabaseQueue.m in Sources */,
+				7EB069E11C43746300A349ED /* Stats.swift in Sources */,
+				7E597FE01C38FB9000862BB5 /* FMDatabase.m in Sources */,
+				7E9CA9861C398BBE00E6426C /* RealmManager.swift in Sources */,
+				7E9CA9881C398BED00E6426C /* Vehicle.swift in Sources */,
+				7E9CA98C1C3A097C00E6426C /* EntriesViewController.swift in Sources */,
+				7E56F0131C407C3700B58B5A /* SettingsTableViewController.swift in Sources */,
+				7E34FB531C3D9A8600043E3C /* BaseViewController.swift in Sources */,
+				7E597FE41C38FB9000862BB5 /* FMResultSet.m in Sources */,
+				7E56F0181C407D3C00B58B5A /* BaseTableViewController.swift in Sources */,
+				7E955EA21C5EF0F500181DBE /* VehicleManagerViewController.swift in Sources */,
+				7E597FE11C38FB9000862BB5 /* FMDatabaseAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E06BE641BBB7F9600126776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E06BE6D1BBB7F9600126776 /* GasLoggerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E06BE6F1BBB7F9600126776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E06BE781BBB7F9600126776 /* GasLoggerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E06BE6A1BBB7F9600126776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E06BE511BBB7F9600126776 /* Gas Log */;
+			targetProxy = 7E06BE691BBB7F9600126776 /* PBXContainerItemProxy */;
+		};
+		7E06BE751BBB7F9600126776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E06BE511BBB7F9600126776 /* Gas Log */;
+			targetProxy = 7E06BE741BBB7F9600126776 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E06BE5B1BBB7F9600126776 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E06BE5C1BBB7F9600126776 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7E06BE601BBB7F9600126776 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E06BE611BBB7F9600126776 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7E06BE7A1BBB7F9600126776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7E06BE7B1BBB7F9600126776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E06BE7D1BBB7F9600126776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8419128D48461BDB85B96349 /* Pods-Gas Log.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "";
+				INFOPLIST_FILE = GasLogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.genecrucean.Gas-Log3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GasLogger/GasLogger-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7E06BE7E1BBB7F9600126776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0A70D709BCE12CEF07D32C7 /* Pods-Gas Log.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "";
+				INFOPLIST_FILE = GasLogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.genecrucean.Gas-Log3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GasLogger/GasLogger-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		7E06BE801BBB7F9600126776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B0EE22F8E03FCDBCADAA853 /* Pods-GasLoggerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GasLoggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daggerdev.GasLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GasLogger.app/GasLogger";
+			};
+			name = Debug;
+		};
+		7E06BE811BBB7F9600126776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBE6D12CAF7CBE9907436BCE /* Pods-GasLoggerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GasLoggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daggerdev.GasLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GasLogger.app/GasLogger";
+			};
+			name = Release;
+		};
+		7E06BE831BBB7F9600126776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1395EF0C35AAF2A1E1E654E2 /* Pods-GasLoggerUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = GasLoggerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daggerdev.GasLoggerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GasLogger;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		7E06BE841BBB7F9600126776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BB3A873D9DA19512F62B6E8 /* Pods-GasLoggerUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = GasLoggerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daggerdev.GasLoggerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GasLogger;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E06BE4D1BBB7F9600126776 /* Build configuration list for PBXProject "GasLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E06BE7A1BBB7F9600126776 /* Debug */,
+				7E06BE7B1BBB7F9600126776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E06BE7C1BBB7F9600126776 /* Build configuration list for PBXNativeTarget "Gas Log" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E06BE7D1BBB7F9600126776 /* Debug */,
+				7E06BE7E1BBB7F9600126776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E06BE7F1BBB7F9600126776 /* Build configuration list for PBXNativeTarget "GasLoggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E06BE801BBB7F9600126776 /* Debug */,
+				7E06BE811BBB7F9600126776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E06BE821BBB7F9600126776 /* Build configuration list for PBXNativeTarget "GasLoggerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E06BE831BBB7F9600126776 /* Debug */,
+				7E06BE841BBB7F9600126776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E06BE4A1BBB7F9600126776 /* Project object */;
+}

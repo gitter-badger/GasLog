@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (3.1.5)
+  - DZNEmptyDataSet (1.7.3)
+  - Material (1.29.0)
+  - Realm (0.97.1):
+    - Realm/Headers (= 0.97.1)
+  - Realm/Headers (0.97.1)
+  - RealmSwift (0.97.1):
+    - Realm (= 0.97.1)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
+  - SVProgressHUD (1.1.3)
+  - SwiftMoment (0.4)
+  - UICKeyChainStore (2.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - DZNEmptyDataSet (~> 1.7)
+  - Material (~> 1.29)
+  - RealmSwift (~> 0.97)
+  - SDWebImage (~> 3.7)
+  - SVProgressHUD
+  - SwiftMoment (~> 0.2)
+  - UICKeyChainStore (~> 2.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
+  DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
+  Material: e5e63d0f06d5c2d1cb4ddc6ebb74b6f8f8bd2bcd
+  Realm: 6854f49cc788171573a0605fe5e55d3224bc39f9
+  RealmSwift: 21aa38ae5210a8e7d3ca2fd02a0ce82476672101
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  SwiftMoment: e751c44be03a183fa6c949426d9473d26a66ef29
+  UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,181 @@
+# Customise this file, documentation can be found here:
+# https://github.com/KrauseFx/fastlane/tree/master/docs
+# All available actions: https://github.com/KrauseFx/fastlane/blob/master/docs/Actions.md
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# By default, fastlane will send which actions are used
+# No personal data is shared, more information on https://github.com/fastlane/enhancer
+# Uncomment the following line to opt out
+# opt_out_usage
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "1.50.0"
+
+default_platform :ios
+
+ENV["SLACK_URL"] = "https://hooks.slack.com/services/T050SUFQG/B0EFQ80SG/kJt9YH5mE43vOTYlo0QZw"
+ENV["CERT_PASSWORD"] = "FfkfdsdfK2m"
+ENV["KEYCHAIN_PASSWORD"] = "H3asd7zf2BB"
+ENV["FASTLANE_PASSWORD"] = "6UtFs3gxdsRtsvqBFNEf"
+
+platform :ios do
+    before_all do
+        # cert(
+        #     output_path: "./fastlane/certs",
+        # )
+        sigh(
+            adhoc: true,
+            # app_identifier: "GasLog_AdHoc",
+            app_identifier: "com.genecrucean.Gas-Log",
+            output_path: "./fastlane/certs",
+            provisioning_name: "GasLog_AdHoc",
+        )
+        cocoapods
+        # ENV['KEYCHAIN_NAME'] = "TempKeychain.keychain"
+        # increment_build_number
+
+        # xctool # run the tests of your app
+    end
+
+    ################# INTERNAL ##################
+    desc "Runs all the tests"
+    lane :test do
+        snapshot
+    end
+
+    desc "Deploy a new Beta Build internally"
+    lane :inhouse do
+        # snapshot
+        # sigh(
+        #     adhoc: true,
+        #     # app_identifier: "GasLog_AdHoc",
+        #     app_identifier: "com.genecrucean.Gas-Log",
+        #     output_path: "./fastlane/certs",
+        #     provisioning_name: "GasLog_AdHoc",
+        # )
+        # cert(
+        #     output_path: "./fastlane/certs",
+        # )
+        # use the UDID of the newly created provisioning profile
+        # ENV["PROFILE_UDID"] = lane_context[SharedValues::SIGH_UDID]
+        # increment_build_number
+        # puts "1 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+        # build_number = Actions.lane_context[Actions::SharedValues::BUILD_NUMBER]
+        # build_number = lane_context[SharedValues::BUILD_NUMBER]
+        # build_number = get_build_number(xcodeproj: "GasLogger.xcodeproj")
+        # puts "2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+        # puts build_number
+        # puts "3 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+
+        gym(
+            scheme: "GasLogger",
+            workspace: "GasLogger.xcworkspace",
+            configuration: "AdHoc",
+            output_directory: "Builds",
+            # output_name: "GasLog_#{build_number}.ipa",
+            output_name: "GasLog.ipa",
+            clean: true,
+            ) # Build your app - more options available
+        # pilot
+        # deliver(force: true)
+        crashlytics(
+            ipa_path: "Builds/GasLog.ipa",
+            # ipa_path: "Builds/GasLogger_#{build_number}.ipa",
+            api_token: "08d922e6ae6eDFsdf4fsdfDdff12389bb6fa98bd18",
+            build_secret: "5ef27b6864e319771898fDFDf23sdf9787cc9d129bbbb6eeec5a20b89",
+            crashlytics_path: "Crashlytics.framework",
+            notes_path: "ReleaseNotes_DoNotEdit.txt",
+            emails: "genecrucean@gmail.com",
+            # notifications: "true",
+            # debug: "false",
+        )
+        # deliver(
+        #     skip_deploy: true,
+        #     beta: true
+        # )
+        # commit_version_bump(
+        #     message: 'Build Version Bump by fastlane',
+        #     force: true
+        # )
+        # frameit
+        slack(
+            message: "App successfully released! :rocket:",
+            # channel: "#dev_info",  # Optional, by default will post to the default channel configured for the POST URL.
+            success: true,        # Optional, defaults to true.
+            payload: {            # Optional, lets you specify any number of your own Slack attachments.
+                'Build Date' => Time.new.to_s,
+                'Built by' => 'Jenkins',
+            },
+            # default_payloads: [:git_branch, :git_author, :lane, :last_git_commit], # Optional, lets you specify a whitelist of default payloads to include. Pass an empty array to suppress all the default payloads. Don't add this key, or pass nil, if you want all the default payloads. The available default payloads are: `lane`, `test_result`, `git_branch`, `git_author`, `last_git_commit`.
+            # attachment_properties: { # Optional, lets you specify any other properties available for attachments in the slack API (see https://api.slack.com/docs/attachments). This hash is deep merged with the existing properties set using the other properties above. This allows your own fields properties to be appended to the existings fields that were created using the `payload` property for instance.
+            # thumb_url: 'http://example.com/path/to/thumb.png',
+            # fields: [{
+            #     title: 'My Field',
+            #     value: 'My Value',
+            #     short: true
+            #     }]
+            # }
+        )
+    end
+
+    # desc "Submit a new Beta Build to Fabric without notifications"
+    # lane :fabric_silent do
+    #     import_certificates
+    #     sigh(adhoc: true)
+    #     ENV["PROFILE_UDID"] = lane_context[SharedValues::SIGH_UDID] # use the UDID of the newly created provisioning profile
+    #     gym(scheme: "GasLogger", sdk: "iphoneos8.0", use_legacy_build_api: true)
+    #     crashlytics(notifications: false)
+    # end
+
+    ################# PUBLIC ##################
+    # desc "Submit a new Beta Build to Apple TestFlight"
+    # desc "This will also make sure the profile is up to date"
+    # lane :beta do
+    #     sigh
+    #     gym(scheme: "GasLogger") # Build your app - more options available
+    #     pilot
+    #
+    #     # sh "your_script.sh"
+    #     # You can also use other beta testing services here
+    # end
+    #
+    # desc "Deploy a new version to the App Store"
+    # lane :appstore do
+    #     snapshot
+    #     sigh
+    #     gym(scheme: "GasLogger", workspace: "GasLogger.xcworkspace", configuration: "Release") # Build your app - more options available
+    #     # deliver(force: true)
+    #     # frameit
+    # end
+
+
+
+    # You can define as many lanes as you want
+
+    after_all do |lane|
+        # This block is called, only if the executed lane was successful
+
+        # slack(
+        #   message: "Successfully deployed new App Update."
+        # )
+    end
+
+    error do |lane, exception|
+        # slack(
+        #   message: exception.message,
+        #   success: false
+        # )
+    end
+end
+
+
+platform :mac do
+
+end
