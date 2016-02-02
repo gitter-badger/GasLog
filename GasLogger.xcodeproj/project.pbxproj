@@ -803,13 +803,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Gene Crucean (W3HZ2ALJ3U)";
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = GasLogger/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.genecrucean.Gas-Log";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9117853c-ac9d-4da5-abed-f007be344991";
 				SWIFT_OBJC_BRIDGING_HEADER = "GasLogger/GasLogger-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -821,13 +822,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gene Crucean";
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = GasLogger/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.genecrucean.Gas-Log";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fc7c516a-1288-4f83-8942-a8668a4f8cfc";
 				SWIFT_OBJC_BRIDGING_HEADER = "GasLogger/GasLogger-Bridging-Header.h";
 			};
 			name = Release;
@@ -884,6 +886,87 @@
 			};
 			name = Release;
 		};
+		7E9325751C60725E00E83F88 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		7E9325761C60725E00E83F88 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0A70D709BCE12CEF07D32C7 /* Pods-Gas Log.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gene Crucean";
+				FRAMEWORK_SEARCH_PATHS = "";
+				INFOPLIST_FILE = GasLogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.genecrucean.Gas-Log";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "52689cf4-4aab-451b-9f46-f47370c42a13";
+				SWIFT_OBJC_BRIDGING_HEADER = "GasLogger/GasLogger-Bridging-Header.h";
+			};
+			name = AdHoc;
+		};
+		7E9325771C60725E00E83F88 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBE6D12CAF7CBE9907436BCE /* Pods-GasLoggerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GasLoggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daggerdev.GasLoggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GasLogger.app/GasLogger";
+			};
+			name = AdHoc;
+		};
+		7E9325781C60725E00E83F88 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BB3A873D9DA19512F62B6E8 /* Pods-GasLoggerUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = GasLoggerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daggerdev.GasLoggerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GasLogger;
+				USES_XCTRUNNER = YES;
+			};
+			name = AdHoc;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -892,6 +975,7 @@
 			buildConfigurations = (
 				7E06BE7A1BBB7F9600126776 /* Debug */,
 				7E06BE7B1BBB7F9600126776 /* Release */,
+				7E9325751C60725E00E83F88 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -901,6 +985,7 @@
 			buildConfigurations = (
 				7E06BE7D1BBB7F9600126776 /* Debug */,
 				7E06BE7E1BBB7F9600126776 /* Release */,
+				7E9325761C60725E00E83F88 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -910,6 +995,7 @@
 			buildConfigurations = (
 				7E06BE801BBB7F9600126776 /* Debug */,
 				7E06BE811BBB7F9600126776 /* Release */,
+				7E9325771C60725E00E83F88 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -919,6 +1005,7 @@
 			buildConfigurations = (
 				7E06BE831BBB7F9600126776 /* Debug */,
 				7E06BE841BBB7F9600126776 /* Release */,
+				7E9325781C60725E00E83F88 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
