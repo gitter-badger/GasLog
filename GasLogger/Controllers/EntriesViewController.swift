@@ -21,6 +21,8 @@ class EntriesViewController: BaseViewController, CLLocationManagerDelegate, UITa
     @IBOutlet weak var gallonsTextField: TextField!
     @IBOutlet weak var priceTextField: TextField!
     
+    @IBOutlet weak var currentVehicleLabel: UILabel!
+    
     let locationManager = CLLocationManager()
     var date = NSDate()
     var lat = 0.0
@@ -81,6 +83,11 @@ class EntriesViewController: BaseViewController, CLLocationManagerDelegate, UITa
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
+        }
+        
+        if let vehicleName = NSUserDefaults.standardUserDefaults().objectForKey(CONSTANTS.NSUSERDEFAULTS.CURRENTLY_SELECTED_VEHICLE_NAME) as? String
+        {
+            currentVehicleLabel.text = vehicleName
         }
     }
     

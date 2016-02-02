@@ -93,6 +93,11 @@ class AddVehicleViewController: BaseViewController, UITableViewDelegate, TextFie
         }
     }
     
+    @IBAction func tapGesture(sender: AnyObject) {
+        vehicleNameTextField.resignFirstResponder()
+    }
+    
+    
     // MARK: - TextFieldDelegate
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
